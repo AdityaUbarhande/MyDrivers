@@ -23,8 +23,8 @@
 //																										//
 //YOU MIGHT GET DEBUGGING ERRORS IN YOUR CODING TO SOLVE THOSE WE HAVE PROVIDED HELP FROM OUR SIDE		//
 //ALWAYS WHILE DEBUGGING OPEN THE ITM DATA CONSOLE TO GET TIPS ON DEBUGGING 							//
-//ALSO WE HAVE PROVIDED WITH A STEP BY STEP UPDATER IN THE ITM DATA CONSOLE 							//
-//THANKS FOR CHOOSING US....  																				//
+//ALSO CODE IS PROVIDED WITH A STEP BY STEP UPDATER IN THE ITM DATA CONSOLE 							//
+//  																				//
 ///******************************************************************************************************///
 
 
