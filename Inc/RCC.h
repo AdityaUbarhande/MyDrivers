@@ -2,7 +2,7 @@
  * Rcc_Driver.h
  *
  *  Created on: Aug 26, 2020
- *      Author: Aditya Technologies.
+ *      Author: Aditya Ubarhande.
  */
 
 #ifndef RCC_DRIVER_H_
