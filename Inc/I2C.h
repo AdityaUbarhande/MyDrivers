@@ -2,7 +2,7 @@
 // * I2C_Driver.h
 // *
 // *  Created on: Aug 26, 2020
-// *      Author: 91726
+// *      Author: Aditya Ubarhande
 // */
 //
 //#ifndef I2C_DRIVER_H_
