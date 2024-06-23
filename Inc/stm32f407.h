@@ -3,7 +3,7 @@
  * stm32f446xx.h
  *
  *  Created on: May 9, 2020
- *  Author: Aditya Technology
+ *  Author: Aditya Ubarhande
  */
 
 #ifndef INC_STM32F407_H_
