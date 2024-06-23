@@ -1,6 +1,6 @@
 //Device specific
 /*
- * stm32f446xx.h
+ * stm32f4xx.h
  *
  *  Created on: May 9, 2020
  *  Author: Aditya Ubarhande
