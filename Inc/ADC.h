@@ -2,7 +2,7 @@
  * ADC_Driver.h
  *
  *  Created on: 11-Jan-2021
- *      Author: Aditya Technologies
+ *      Author: Aditya Ubarhande
  */
 
 //todo: Complete the channel select API (too easy)
