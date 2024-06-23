@@ -2,7 +2,7 @@
  * USART_Driver.h
  *
  *  Created on: 29-Dec-2020
- *      Author: Aditya Technologies
+ *      Author: Aditya Ubarhande
  */
 
 //WHY INCREMENT THE TXBUFFER TWICE?????
