@@ -2,7 +2,7 @@
  * Bit_Position.h
  *
  *  Created on: Aug 26, 2020
- *      Author: 91726
+ *      Author: Aditya Ubarhande
  */
 
 #ifndef BIT_POSITION_H_
