@@ -2,7 +2,7 @@
 #include<stdio.h>
 int main(void)
 {
-	//Variable Definitions
+     //Variable Definitions
     uint32_t* GPIO_MODER = (uint32_t*)0x40020C00;
     uint32_t* GPIO_ODR = (uint32_t*)0x40020C14;
 
@@ -34,39 +34,37 @@ int main(void)
 
     while(1)
     {
-		 *ADC_CR2 |= (1 << 30);					//Start Conversion
-		 while(!((*ADC_STAT >> 4) == 1));		//Wait for conversion to start
+		*ADC_CR2 |= (1 << 30);					//Start Conversion
+		while(!((*ADC_STAT >> 4) == 1));		//Wait for conversion to start
 
-		   uint16_t Vsense =  (uint16_t)*ADC_DR;			//Read ADC output data
-		   double voltage, celsius;
+		uint16_t Vsense =  (uint16_t)*ADC_DR;			//Read ADC output data
+		double voltage, celsius;
+	
+		voltage = (double)Vsense/4095*3.3;
+		celsius = (double)(((voltage - 0.76) / 0.0025) + 25);
 
-		   voltage = (double)Vsense/4095*3.3;
-		   celsius = (double)(((voltage - 0.76) / 0.0025) + 25);
 
+		printf("\nTemperature is: %.2f", celsius);			//Print the temperature through ITM (for debugging purposes)
 
-		   printf("\nTemperature is: %.2f", celsius);			//Print the temperature through ITM (for debugging purposes)
-
-		   if(celsius < 57.5)
-			{
-			   *GPIO_ODR &= ~(1 << 13);
-				*GPIO_ODR &= ~(1 << 14);
-				*GPIO_ODR |= (1 << 15);
-			}
-			else if(celsius < 68 && celsius > 58)
-			{
-				*GPIO_ODR &= ~(1 << 15);
-				*GPIO_ODR &= ~(1 << 14);
-				*GPIO_ODR |= (1 << 13);
-			}
-			else if(celsius > 65)
-			{
-				*GPIO_ODR &= ~(1 << 15);
-				*GPIO_ODR &= ~(1 << 13);
-				*GPIO_ODR |= (1 << 14);
-			}
+		if(celsius < 57.5)
+		{
+		   *GPIO_ODR &= ~(1 << 13);
+			*GPIO_ODR &= ~(1 << 14);
+			*GPIO_ODR |= (1 << 15);
+		}
+		else if(celsius < 68 && celsius > 58)
+		{
+			*GPIO_ODR &= ~(1 << 15);
+			*GPIO_ODR &= ~(1 << 14);
+			*GPIO_ODR |= (1 << 13);
+		}
+		else if(celsius > 65)
+		{
+			*GPIO_ODR &= ~(1 << 15);
+			*GPIO_ODR &= ~(1 << 13);
+			*GPIO_ODR |= (1 << 14);
+		}
 
     }
-
-
 }
 
